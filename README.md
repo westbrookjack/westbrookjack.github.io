@@ -22,8 +22,7 @@ Visit the site here: [https://westbrookjack.github.io](https://westbrookjack.git
 - `index.html` – Main HTML page for the personal website
 - `CV.pdf` – My most recent academic CV (linked from the homepage)
 - `casual_headshot_passport_sized.png` – Profile image used on the site
-- `favicon.ico` – Custom site icon (optional)
-- `.nojekyll` – Prevents GitHub Pages from ignoring files/folders that begin with an underscore
+- `calculator_math_icon.png` – Custom site icon (optional)
 
 ## ✨ Features
 
