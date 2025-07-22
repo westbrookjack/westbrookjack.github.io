@@ -44,7 +44,5 @@ This is a static site hosted via GitHub Pages. To preview locally:
 
 ## 📄 License
 
-All content in this repository (text, layout, and design) is © Jack Westbrook unless otherwise stated. Code snippets and layout may be reused with attribution.
-
 For questions, corrections, or collaboration inquiries, please contact: [jackswestbrook@gmail.com](mailto:jackswestbrook@gmail.com)
 
