@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <meta charset="UTF-8" />
   <title>Reflections | Jack Westbrook</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
@@ -43,22 +47,52 @@
   </p>
 
   <ul>
-    <li><a href="#on-certainty">On Certainty and Mathematical Reality</a></li>
-    <li><a href="#geometry-of-abstraction">The Geometry of Abstraction</a></li>
-    <!-- Add more links here -->
+    <li><a href="#skolem">Skolem’s Paradox</a></li>
   </ul>
 
   <hr>
+  
+ <h2 id="skolem">Skolem’s Paradox</h2>
 
-  <h2 id="on-certainty">On Certainty and Mathematical Reality</h2>
-  <p>
-    In a world where truth is often shaped by perception, the internal consistency of mathematics offers something deeply compelling. Unlike physical observation, mathematical statements, once proven, are unassailably true within their framework...
-  </p>
+<p><strong>Jack Westbrook</strong><br>
+University of Wisconsin–Madison<br>
+July 23, 2025</p>
 
-  <h2 id="geometry-of-abstraction">The Geometry of Abstraction</h2>
-  <p>
-    Algebraic geometry, at first glance, seems divorced from geometry as we know it—angles, distances, curvature. But its power lies in what it abstracts: the idea that shape can be encoded by equations, that symmetry and structure reveal truths across fields...
-  </p>
+<p><em>In this essay, I explore Skolem’s paradox—what it is, why it appears paradoxical, how mathematics resolves it, and the philosophical implications surrounding it.</em></p>
+
+<h3>Introduction</h3>
+<p>
+In the nineteenth century, mathematicians realized that all of mathematics could be encoded using sets, with the only primitive relation being set membership (\( \in \)). This insight led to Zermelo–Fraenkel set theory with the Axiom of Choice (ZFC), now the foundational system for modern mathematics.
+</p>
+<p>
+One key question in set theory is when two sets are "the same size." Cantor showed that infinite sets can come in different sizes: for any set \( A \), its power set \( 2^A \) is strictly larger. Yet, the Löwenheim–Skolem theorems tell us that ZFC has countable models—ones whose domain is the same size as the natural numbers \( \mathbb{N} \). This seems contradictory: how can a model contain uncountable sets if its domain is countable?
+</p>
+
+<h3>Mathematical Resolution</h3>
+<p>
+The resolution lies in understanding what a model of set theory means. A model \( M \) may contain a set \( x \) it believes is uncountable (i.e., it believes no bijection exists between \( x \) and \( \mathbb{N} \)), yet from the outside, we can construct such bijections because \( M \)'s domain is countable. The paradox is semantic, not mathematical—it arises from interpreting “uncountability” inside vs. outside the model.
+</p>
+<p>
+This subtlety traces to how quantifiers are interpreted: in the model-theoretic sense, existential quantifiers range over the model’s domain only. Thus, \( M \models \text{“}x \text{ is uncountable”} \) may be true internally, even if externally \( x \) is countable.
+</p>
+<p>
+Moreover, the paradox relies on first-order logic. Second-order set theory can avoid these issues by quantifying over all subsets directly, and constructivist logics also bypass some of the same problems. Hence, the Löwenheim–Skolem theorems—and the paradox—are not universal but logic-dependent.
+</p>
+
+<h3>Philosophical Reflections</h3>
+<p>
+Skolem advocated an algebraic conception of set theory: sets don’t exist independently but are merely elements of whatever model satisfies our axioms. This contrasts with realist or Platonist perspectives, which view mathematical objects (like sets) as existing in an abstract, objective realm.
+</p>
+<p>
+From the Platonist viewpoint, the existence of countable models that contain “uncountable” sets is no problem, because such models are simply incomplete representations of the true set-theoretic universe. On this view, there really is a unique universe \( V \) in which uncountability has a fixed meaning.
+</p>
+<p>
+I find this perspective more satisfying. It explains why mathematics is so effective and consistent across disciplines: we are not just playing formal games but uncovering truths about a shared abstract structure. Moreover, relying solely on first-order logic feels unnecessarily limiting when more expressive systems like second-order logic offer ways to capture concepts like uncountability more faithfully.
+</p>
+
+<p><em>This essay was originally written for a philosophy course at the University of Wisconsin–Madison.</em></p>
+
+
 
   <footer>Back to <a href="index.html">Home</a></footer>
 </body>
