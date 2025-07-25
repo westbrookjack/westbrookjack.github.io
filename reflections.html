@@ -43,56 +43,57 @@
 <body>
   <h1>Reflections</h1>
   <p>
-    Informal thoughts and short essays on mathematical philosophy, abstraction, and related topics. Some are technical, others are reflective—but all are grounded in my appreciation of the complexity of the universe.
+    Informal thoughts and short essays on mathematical philosophy, abstraction, and related topics.
   </p>
 
   <ul>
-    <li><a href="#skolem">Skolem’s Paradox</a></li>
+    <li><a href="#precision">On the Importance of Precision of Language</a></li>
   </ul>
 
   <hr>
+    
+	<h2 id="precision">On the Importance of Precision of Language</h2>
   
- <h2 id="skolem">Skolem’s Paradox</h2>
+  <p><em>In this essay, I respond to a question posed by a philosophy classmate at Madison: "If mathematics is so remarkably successful at describing the universe, does that not support the existence of a creator of the universe?"</em></p>
+  
+  <p>Imagine I am holding a single grain of sand in my palm. I ask you, "Is this a heap of sand?"</p>
+  <p>You, being the reasonable human you are, look at me quizzically and ask why I'd even pose such a trivial question. I reply, "Never mind that — just humor me and help me out with this experiment."</p>
+  <p>After adding another grain, I ask again, "Now do I have a heap?"</p>
+  <p>"No, of course not."</p>
+  <p>Eventually, after painstakingly adding tens, maybe hundreds, or even thousands of individual grains, you reach a point where you’re no longer sure how to respond. On one hand, I’m now holding something that definitely resembles a heap. On the other, you think: <em>But I just said it wasn’t a heap last time, and all he did was add one more grain. How could a single grain of sand turn a non-heap into a heap?</em></p>
+  <p>Then you wonder: <em>So where should I have said yes? The last time? Ten times before? A hundred?</em></p>
+  <p>You're not at fault for this uncertainty — anyone as logical as you would face the same dilemma. The issue lies in the vagueness of the word "heap." It lacks precise criteria, so logical reasoning struggles to apply. Let's formalize this by pairing your reasoning with a few plausible premises:</p>
 
-<p><strong>Jack Westbrook</strong><br>
-University of Wisconsin–Madison<br>
-July 23, 2025</p>
+  <ol>
+    <li>1 grain of sand is not a heap.</li>
+    <li>For any positive integer \( n \), if \( n \) grains of sand is not a heap, then \( n + 1 \) grains of sand is not a heap.</li>
+    <li>1 billion grains of sand is a heap.</li>
+  </ol>
 
-<p><em>In this essay, I explore Skolem’s paradox—what it is, why it appears paradoxical, how mathematics resolves it, and the philosophical implications surrounding it.</em></p>
+  <p>You might object: "If those billion grains were spread across the Earth, it wouldn't be a heap!" Fair. So let’s assume they are placed in a reasonable pile — no tricks or loopholes. We now show that these three premises are inconsistent using a standard mathematical proof technique: induction.</p>
 
-<h3>Introduction</h3>
-<p>
-In the nineteenth century, mathematicians realized that all of mathematics could be encoded using sets, with the only primitive relation being set membership (\( \in \)). This insight led to Zermelo–Fraenkel set theory with the Axiom of Choice (ZFC), now the foundational system for modern mathematics.
-</p>
-<p>
-One key question in set theory is when two sets are "the same size." Cantor showed that infinite sets can come in different sizes: for any set \( A \), its power set \( 2^A \) is strictly larger. Yet, the Löwenheim–Skolem theorems tell us that ZFC has countable models—ones whose domain is the same size as the natural numbers \( \mathbb{N} \). This seems contradictory: how can a model contain uncountable sets if its domain is countable?
-</p>
+  <p>We claim that if Premises 1 and 2 are true, then for any positive integer \( n \), \( n \) grains of sand is not a heap.</p>
+  <ul>
+    <li><strong>Base case:</strong> \( n = 1 \). Premise 1 gives us that 1 grain is not a heap.</li>
+    <li><strong>Inductive step:</strong> Suppose \( n \) grains is not a heap. Then Premise 2 implies that \( n + 1 \) grains is also not a heap.</li>
+  </ul>
+  <p>By mathematical induction, all positive integers fail to form a heap — including 1 billion grains — contradicting Premise 3.</p>
 
-<h3>Mathematical Resolution</h3>
-<p>
-The resolution lies in understanding what a model of set theory means. A model \( M \) may contain a set \( x \) it believes is uncountable (i.e., it believes no bijection exists between \( x \) and \( \mathbb{N} \)), yet from the outside, we can construct such bijections because \( M \)'s domain is countable. The paradox is semantic, not mathematical—it arises from interpreting “uncountability” inside vs. outside the model.
-</p>
-<p>
-This subtlety traces to how quantifiers are interpreted: in the model-theoretic sense, existential quantifiers range over the model’s domain only. Thus, \( M \models \text{“}x \text{ is uncountable”} \) may be true internally, even if externally \( x \) is countable.
-</p>
-<p>
-Moreover, the paradox relies on first-order logic. Second-order set theory can avoid these issues by quantifying over all subsets directly, and constructivist logics also bypass some of the same problems. Hence, the Löwenheim–Skolem theorems—and the paradox—are not universal but logic-dependent.
-</p>
+  <p>If you’re unfamiliar with induction, here’s an intuition: imagine lining up an infinite number of dominos. The base case knocks over the first one. The inductive step ensures that if any domino falls, the next will too. Together, they prove every domino falls — just like we proved every number of grains isn’t a heap.</p>
 
-<h3>Philosophical Reflections</h3>
-<p>
-Skolem advocated an algebraic conception of set theory: sets don’t exist independently but are merely elements of whatever model satisfies our axioms. This contrasts with realist or Platonist perspectives, which view mathematical objects (like sets) as existing in an abstract, objective realm.
-</p>
-<p>
-From the Platonist viewpoint, the existence of countable models that contain “uncountable” sets is no problem, because such models are simply incomplete representations of the true set-theoretic universe. On this view, there really is a unique universe \( V \) in which uncountability has a fixed meaning.
-</p>
-<p>
-I find this perspective more satisfying. It explains why mathematics is so effective and consistent across disciplines: we are not just playing formal games but uncovering truths about a shared abstract structure. Moreover, relying solely on first-order logic feels unnecessarily limiting when more expressive systems like second-order logic offer ways to capture concepts like uncountability more faithfully.
-</p>
+  <p>So what went wrong? Our reasoning was valid. Our premises seemed reasonable. Yet we reached a contradiction — a paradox. My resolution: we should not expect vague, everyday language to behave well under formal logic. Logic requires precise objects and definitions, not fuzzy boundaries or subjective interpretation.</p>
 
-<p><em>This essay was originally written for a philosophy course at the University of Wisconsin–Madison.</em></p>
+  <p>Suppose we tried to formalize “heap” with precision: how many grains, how closely packed, their dimensions, their shape, etc. The resulting definition would be long and hard to apply in real-time conversation. But that vagueness is what makes the word "heap" so usable in daily life. It’s fast, flexible, and generally good enough. For casual use, imprecision is an asset.</p>
 
+  <p>But in disciplines where precision, truth, and consistency matter — like science or mathematics — vagueness is fatal. There, the tradeoff of accessibility for exactness is well worth it.</p>
 
+  <p>Try this: define “heap” with a list of precise conditions. Then examine each condition — is it itself vague? If so, define that term too. Eventually you’ll reach a stopping point: a primitive concept that can’t be defined further without circularity. In mathematics, that’s exactly how it works.</p>
+
+  <p>Mathematics builds everything — numbers, functions, spaces — from primitive objects like sets. A set is inherently precise. It has no gray area. So mathematics succeeds not because it is magically aligned with the universe, but because it is the only system we’ve created that is <em>precise enough</em> for logic to fully apply. Every concept has a fixed definition; every step of reasoning is constrained by rules.</p>
+
+  <p>So in response to the question: no, I don’t think mathematics needs a divine explanation. I believe its success is due to its unparalleled clarity — a clarity that comes from working only with well-defined, precisely constructed objects. If any other field could match that, perhaps it too would enjoy the same predictive power and elegance.</p>
+
+  <p>Mathematics works not because the universe was written in its language, but because mathematics is the only language we’ve refined enough to speak clearly.</p>
 
   <footer>Back to <a href="index.html">Home</a></footer>
 </body>
