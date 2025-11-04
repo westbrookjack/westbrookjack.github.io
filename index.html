@@ -86,15 +86,111 @@ footer {
 </head>
 
 <body>
-  <nav style="position: sticky; top: 0; background: white; padding: 10px 0; z-index: 1000;">
-  <nav aria-label="Main navigation">
-  <strong>Navigate:</strong>
-  <a href="#about">About</a> |
-  <a href="#research">Research</a> |
-  <a href="#research-projects">Other Projects</a> |
-  <a href="#contact">Contact</a> |
-  <a href="reflections.html">Reflections</a>
-</nav>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#research-projects">Other Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="reflections.html">Reflections</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eaeaea;
+}
+
+.nav {
+  max-width: 800px;     
+  margin: 0 auto;
+  padding: 0.55rem 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.45rem 0.75rem;
+  border-radius: 9999px; 
+  color: #1a2e46;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  background: #f5faff;
+  text-decoration: none;
+}
+
+.nav a.active {
+  background: #1a2e46;
+  color: #fff;
+}
+
+/* small screens: horizontal scroll with hidden scrollbar */
+@media (max-width: 600px) {
+  .nav {
+    overflow-x: auto;
+  }
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* accessibility: skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  z-index: 1100;
+  background: #1a2e46;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+</style>
+
+<script>
+  // Automatically highlight the current section in view
+  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
+  const targets = links
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l =>
+          l.classList.toggle('active',
+            l.getAttribute('href') === `#${e.target.id}`));
+      }
+    });
+  }, { rootMargin: '-55% 0px -45% 0px', threshold: 0 });
+
+  targets.forEach(t => io.observe(t));
+</script>
 
   <section id="about">
   <div style="
