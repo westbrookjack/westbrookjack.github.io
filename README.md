@@ -6,10 +6,9 @@ This repository contains the source code for [Jack Westbrook’s academic websit
 
 I am an incoming MSc student in Pure Mathematics at Imperial College London, with research interests in:
 
-- Arithmetic Geometry  
-- Commutative Algebra  
-- Algebraic Number Theory  
-- Post-Quantum Cryptography (PQC)  
+- Arithmetic Geometry
+- p-adic Hodge theory  
+- Modularity
 
 The site highlights selected research projects, solution compilations (e.g. Vakil’s *The Rising Sea*), and relevant academic software/code.
 
