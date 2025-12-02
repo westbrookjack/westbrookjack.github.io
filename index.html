@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.counter.dev/script.js" data-id="jackwestbrook" data-utcoffset="-5"></script>
@@ -10,312 +8,200 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jack Westbrook – Pure Mathematics MSc and researcher in arithmetic geometry, number theory, and commutative algebra.">
+  <meta name="description" content="Jack Westbrook – MSc in Pure Mathematics at Imperial College London. Research interests in arithmetic geometry, the Langlands program, and commutative algebra.">
   <meta name="author" content="Jack Westbrook">
   <meta name="keywords" content="Jack Westbrook, Jack Samson Westbrook, Westbrook Jack, mathematics, pure mathematics, arithmetic geometry, algebraic geometry, number theory, algebraic number theory, commutative algebra, category theory, Lie algebras, cryptography, mathematical philosophy, MSc Imperial College London, Imperial College London, ICL, UW-Madison, University of Wisconsin–Madison, math research, mathematical logic, Galois theory, homological algebra,p-adic Hodge theory, p-adic Hodge,">
 
   <link rel="shortcut icon" href="calculator_math_icon.png" type="image/png">
 
-  <title>Jack Westbrook | Mathematics</title>
+  <title>Jack Westbrook | About</title>
+
   <style>
     body {
-  font-family: 'Roboto', system-ui, sans-serif;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.6;
-  color: #333;
-}
+      font-family: 'Roboto', system-ui, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #333;
+    }
 
-h1, h2, h3 {
-  font-family: 'Merriweather', Georgia, serif;
-  color: #1a2e46;
-}
+    h1, h2, h3 {
+      font-family: 'Merriweather', Georgia, serif;
+      color: #1a2e46;
+    }
 
     a {
       color: #0366d6;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     @media (max-width: 600px) {
-  body {
-    padding: 10px;
-    font-size: 16px;
-  }
-  section, h2 {
-    margin-top: 2.5em;
-}
+      body {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      section, h2 {
+        margin-top: 2.5em;
+      }
 
       section {
-  background-color: #fafafa;
-  padding: 30px 20px;
-  margin: 40px 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  border-top: 1px solid #e0e0e0;
-}
-
-
-  img {
-  max-width: 100%;
-  height: auto;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+        background-color: #fafafa;
+        padding: 30px 20px;
+        margin: 40px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border-top: 1px solid #e0e0e0;
+      }
 
       li:hover {
-  background-color: #f5faff;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
-}
+        background-color: #f5faff;
+        transition: background-color 0.3s ease;
+        border-radius: 4px;
+      }
 
-footer {
-  opacity: 0.8;
-}
+      footer {
+        opacity: 0.8;
+      }
+    }
 
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eaeaea;
+    }
 
+    .nav {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.55rem 20px;
+    }
 
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
 
-}
+    .nav a {
+      display: inline-block;
+      padding: 0.45rem 0.75rem;
+      border-radius: 9999px;
+      color: #1a2e46;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
+    .nav a:hover {
+      background: #f5faff;
+      text-decoration: none;
+    }
+
+    .nav a.active {
+      background: #1a2e46;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        overflow-x: auto;
+      }
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      z-index: 1100;
+      background: #1a2e46;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+    }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#research-projects">Other Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="reflections.html">Reflections</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Other Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<style>
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid #eaeaea;
-}
+  <main id="main-content">
+    <section id="about">
+      <div style="
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 28px;
+      ">
+        <img
+          src="/website_photo.jpeg"
+          alt="Jack Westbrook"
+          style="
+            width: 180px;
+            border-radius: 10px;
+            flex-shrink: 0;
+          "
+        >
+        <div style="line-height: 1.4;">
+          <h1 style="margin: 0;">Jack Westbrook</h1>
+          <p style="margin: 4px 0 6px;"><em>MSc in Pure Mathematics, Imperial College London</em></p>
+          <p style="margin: 2px 0;"><a href="https://cdn.jsdelivr.net/gh/westbrookjack/CV@main/CV.pdf" target="_blank">CV</a></p>
+          <p style="margin: 2px 0;">Email: jsw225 [at] ic [dot] ac [dot] uk</p>
+        </div>
+      </div>
 
-.nav {
-  max-width: 800px;     
-  margin: 0 auto;
-  padding: 0.55rem 20px;
-}
+      <p>
+        My research interests lie largely in number theory, especially arithmetic geometry and the Langlands program. I’m particularly drawn to p-adic and global Galois representations and to arithmetic local-to-global principles, where number theory, algebraic geometry, representation theory, and analysis intersect in beautiful ways.
+      </p>
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 0.25rem;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
+      <p>
+        Outside of mathematics, I enjoy writing fiction and philosophy, over-sharing elliptic curves, finite fields, p-adic numbers, and number theory with unsuspecting family and friends, playing 1|0 chess (or possibly 3|2), and pursuing independent cryptographic projects.
+      </p>
+    </section>
+  </main>
 
-.nav a {
-  display: inline-block;
-  padding: 0.45rem 0.75rem;
-  border-radius: 9999px; 
-  color: #1a2e46;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  background: #f5faff;
-  text-decoration: none;
-}
-
-.nav a.active {
-  background: #1a2e46;
-  color: #fff;
-}
-
-/* small screens: horizontal scroll with hidden scrollbar */
-@media (max-width: 600px) {
-  .nav {
-    overflow-x: auto;
-  }
-  .nav::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-/* accessibility: skip link */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-}
-.skip-link:focus {
-  left: 10px;
-  top: 10px;
-  z-index: 1100;
-  background: #1a2e46;
-  color: #fff;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-}
-</style>
-
-<script>
-  // Automatically highlight the current section in view
-  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
-  const targets = links
-    .map(a => document.querySelector(a.getAttribute('href')))
-    .filter(Boolean);
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(l =>
-          l.classList.toggle('active',
-            l.getAttribute('href') === `#${e.target.id}`));
-      }
-    });
-  }, { rootMargin: '-55% 0px -45% 0px', threshold: 0 });
-
-  targets.forEach(t => io.observe(t));
-</script>
-
-  <section id="about">
-  <div style="
-    display: flex;
-    align-items: center;
-    gap: 24px; 
-    margin-bottom: 28px; 
-  ">
-    <img
-      src="/website_photo.jpeg"
-      alt="Jack Westbrook"
-      style="
-        width: 180px;       
-        border-radius: 10px;  
-        flex-shrink: 0;      
-      "
-    >
-    <div style="line-height: 1.4;">
-      <h1 style="margin: 0;">Jack Westbrook</h1>
-      <p style="margin: 4px 0 6px;"><em>MSc in Pure Mathematics, Imperial College London</em></p>
-      <p style="margin: 2px 0;"><a href="https://cdn.jsdelivr.net/gh/westbrookjack/CV@main/CV.pdf" target="_blank">CV</a></p>
-      <p style="margin: 2px 0;">Email: jsw225 [at] ic [dot] ac [dot] uk</p>
-    </div>
-  </div>
-
-
-<p>
-  My research interests lie largely in number theory, especially arithmetic geometry and the Langlands program. I’m particularly drawn to p-adic and global Galois representations and to arithmetic local-to-global principles, where number theory, algebraic geometry, representation theory, and analysis intersect in beautiful ways.
-</p>
-
-<p>
-  Outside of mathematics, I enjoy writing fiction and philosophy, over-sharing elliptic curves, finite fields, p-adic numbers, and number theory with unsuspecting family and friends, playing 1|0 chess (or possibly 3|2), and pursuing independent cryptographic projects.
-</p>
-
-
-
-  </section>
-  <section id="research">
-  <h2>Research</h2>
-  <ul>
-    <li>
-      <strong>MSc Thesis (Imperial College London)</strong> — <em>In progress, 2025.</em>
-      Conducted under the supervision of George Boxer, focusing on p-adic Hodge theory and modular forms.
-    </li>
-
-
-
-    <li>
-      <strong>On Deformation of Perfectoid Purity in Gorenstein Domains</strong> — with Baily, Dovgodko, and Simpson. 
-      <br>
-      We investigate when perfectoid purity, a mixed-characteristic analog of F-purity, deforms from a quotient \( R/pR \) to a complete Gorenstein local ring \( R \). This work establishes a connection between vanishing of local cohomology in absolute integral closures and deformation of splinters.
-      [<a href="https://arxiv.org/abs/2504.02966" target="_blank">arXiv:2504.02966</a>]
-    </li>
-
-    <li>
-      <strong>Some Applications of the Brenner–Monsky Quartic</strong> — with Dovgodko and Simpson.  
-      <em>In preparation</em>, 2025.  
-      <br>
-      We construct a two-parameter family of Segre products involving Monsky’s quartics with varying Hilbert–Kunz multiplicities and present a new counterexample to localization of tight closure in the mildly singular case.
-      [<a href="https://lsa.umich.edu/content/dam/math-assets/reu-su22/reu-2024/Dovgodko%20and%20Westbrook_hkm_two_parameters.pdf" target="_blank">Early Draft</a>]
-    </li>
-
-    <li>
-      <strong>Examples of Lie Algebras with Specified Newton Polygons</strong> — with Alwan, K. Huang, T. Huang, and Stovall.  
-      <em>In preparation</em>, 2025.  
-      <br>
-      We determine all minimal Newton polygons on \( \mathbb{R}^n \) for \( n \leq 13 \), and provide bounds for Newton polygons in arbitrary dimensions.
-    </li>
-  </ul>
-  </section>
-  <section id="research-projects">
-  <h2>Other Research & Projects</h2>
-  <ul>
-    <li>
-      <strong>The Rising Sea Solutions</strong> — A self-contained write-up of exercises and results from Vakil’s <em>The Rising Sea</em>.  
-      [<a href="https://cdn.jsdelivr.net/gh/westbrookjack/vakil-solutions@main/Solutions_To_The_Rising_Sea.pdf" target="_blank">PDF</a>] 
-      
-      [<a href="https://github.com/westbrookjack/Solutions-To-The-Rising-Sea" target="_blank">GitHub</a>]
-    </li>
-
-    <li>
-      <strong>The Arithmetic of Elliptic Curves Solutions</strong> — A collection of expanded proofs, remarks, and exercise solutions from Silverman’s <em>The Arithmetic of Elliptic Curves</em>.  
-      [<a href="https://cdn.jsdelivr.net/gh/westbrookjack/AEC-solutions@main/Solutions_to_The_Arithmetic_of_Elliptic_Curves.pdf" target="_blank">PDF</a>] 
-      
-      [<a href="https://github.com/westbrookjack/Solutions-to-The-Arithmetic-of-Elliptic-Curves" target="_blank">GitHub</a>]
-    </li>
-
-    <li>
-      <strong>Describing a Hyperbolic Surface: From Lengths and Twists to Matrices</strong> — UW–Madison MxM Undergraduate Research Seminar, Fall 2022.  
-      <br>
-      We constructed explicit generators in \( \mathrm{PSL}(2, \mathbb{R}) \) for Fuchsian groups representing hyperbolic surfaces (e.g. pairs of pants), using twist and length parameters.  
-      [<a href="https://mxm.math.wisc.edu/past-semesters/fall-2022/" target="_blank">program link</a>]
-    </li>
-
-    <li>
-      <strong>A Proof of Quadratic Reciprocity by Galois Theory</strong> — A complete Galois-theoretic proof of quadratic reciprocity, expanding on a sketch by Prof. Ana Caraiani.
-      [<a href="https://cdn.jsdelivr.net/gh/westbrookjack/quadratic-reciprocity-galois@main/Quadratic_Reciprocity_by_Galois_Theory.pdf" target="_blank">PDF</a>] 
-      [<a href="https://github.com/westbrookjack/Quadratic-Reciprocity-by-Galois-Theory" target="_blank">GitHub</a>]
-    </li>
-
-    <li>
-      <strong>Segre & Veronese Algorithms in Macaulay2</strong> — Macaulay2 code for computing presentations of Veronese subrings and Segre products of graded rings.  
-      [<a href="https://github.com/westbrookjack/SegrePresentation" target="_blank">GitHub (Segre)</a>]
-      [<a href="https://github.com/westbrookjack/VeronesePresentation" target="_blank">GitHub (Veronese)</a>]
-    </li>
-
-    <li>
-      <strong>Original Number Theory Problems</strong> — A collection of 9 self-authored problems with complete solutions exploring Diophantine equations and modular arithmetic; one was used for a UW–Madison Putnam Club meeting, where students attempted the problem and I presented the solution.  
-      [<a href="https://cdn.jsdelivr.net/gh/westbrookjack/my-NT-problems@main/My_NT_Problems.pdf" target="_blank">PDF</a>] 
-      [<a href="https://github.com/westbrookjack/my-NT-problems" target="_blank">GitHub</a>]
-    </li>
-  </ul>
-</section>
-
-  <section id="contact">
-  <h2>Contact</h2>
-  <ul>
-    <li>Email: jsw225 [at] ic [dot] ac [dot] uk</a></li>
-    <li>GitHub: <a href="https://github.com/westbrookjack">westbrookjack</a></li>
-    <li>LinkedIn: <a href="https://linkedin.com/in/jack-westbrook">jack-westbrook</a></li>
-  </ul>
-  </section>
   <footer style="text-align: center; font-size: 0.9em; color: #666; margin-top: 60px;">
-  Last updated: November 12, 2025 - Jack Westbrook
-</footer>
-
+    Last updated: December 2, 2025 - Jack Westbrook
+  </footer>
 </body>
 </html>
