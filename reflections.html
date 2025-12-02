@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reflections | Jack Westbrook</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.counter.dev/script.js" data-id="jackwestbrook" data-utcoffset="-5"></script>
+
+  <link rel="shortcut icon" href="calculator_math_icon.png" type="image/png">
+
+  <meta name="description" content="Reflections by Jack Westbrook on mathematical philosophy, abstraction, and related topics.">
+  <meta name="author" content="Jack Westbrook">
 
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', system-ui, sans-serif;
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
@@ -16,8 +23,8 @@
       color: #333;
     }
 
-    h1, h2 {
-      font-family: 'Merriweather', serif;
+    h1, h2, h3 {
+      font-family: 'Merriweather', Georgia, serif;
       color: #1a2e46;
     }
 
@@ -28,6 +35,15 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     footer {
@@ -51,6 +67,97 @@
       color: #1a2e46;
       font-weight: bold;
     }
+
+    /* Header / nav to match other pages */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .nav {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.55rem 20px;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav a {
+      display: inline-block;
+      padding: 0.45rem 0.75rem;
+      border-radius: 9999px;
+      color: #1a2e46;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      background: #f5faff;
+      text-decoration: none;
+    }
+
+    .nav a.active {
+      background: #1a2e46;
+      color: #fff;
+    }
+
+    /* small screens */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      section, h2 {
+        margin-top: 2.5em;
+      }
+
+      section {
+        background-color: #fafafa;
+        padding: 30px 20px;
+        margin: 40px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .nav {
+        overflow-x: auto;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    /* accessibility: skip link */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      z-index: 1100;
+      background: #1a2e46;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+    }
   </style>
 
   <script>
@@ -66,86 +173,87 @@
   <script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <h1>Reflections</h1>
-  <p>
-    Informal thoughts and short essays on mathematical philosophy, abstraction, and related topics.
-  </p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <ul>
-    <li><a href="#precision">On the Importance of Precision of Language</a></li>
-    <li><a href="#abstraction">The Danger In Abstraction</a></li>
-  </ul>
-
-  <hr>
-
-  <details id="precision">
-    <summary>On the Importance of Precision of Language</summary>
-    <div>
-      <p><em>In this essay, I respond to a question posed by a philosophy classmate at Madison: "If mathematics is so remarkably successful at describing the universe, does that not support the existence of a creator of the universe?"</em></p>
-
-      <p>Imagine I am holding a single grain of sand in my palm. I ask you, "Is this a heap of sand?"</p>
-      <p>You, being the reasonable human you are, look at me quizzically and ask why I'd even pose such a trivial question. I reply, "Never mind that — just humor me and help me out with this experiment."</p>
-      <p>After adding another grain, I ask again, "Now do I have a heap?"</p>
-      <p>"No, of course not."</p>
-      <p>Eventually, after painstakingly adding tens, maybe hundreds, or even thousands of individual grains, you reach a point where you’re no longer sure how to respond. On one hand, I’m now holding something that definitely resembles a heap. On the other, you think: <em>But I just said it wasn’t a heap last time, and all he did was add one more grain. How could a single grain of sand turn a non-heap into a heap?</em></p>
-      <p>Then you wonder: <em>So where should I have said yes? The last time? Ten times before? A hundred?</em></p>
-      <p>You're not at fault for this uncertainty — anyone as logical as you would face the same dilemma. The issue lies in the vagueness of the word "heap." It lacks precise criteria, so logical reasoning struggles to apply. Let's formalize this by pairing your reasoning with a few plausible premises:</p>
-
-      <ol>
-        <li>1 grain of sand is not a heap.</li>
-        <li>For any positive integer \( n \), if \( n \) grains of sand is not a heap, then \( n + 1 \) grains of sand is not a heap.</li>
-        <li>1 billion grains of sand is a heap.</li>
-      </ol>
-
-      <p>You might object: "If those billion grains were spread across the Earth, it wouldn't be a heap!" Fair. So let’s assume they are placed in a reasonable pile — no tricks or loopholes. We now show that these three premises are inconsistent using a standard mathematical proof technique: induction.</p>
-
-      <p>We claim that if Premises 1 and 2 are true, then for any positive integer \( n \), \( n \) grains of sand is not a heap.</p>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
       <ul>
-        <li><strong>Base case:</strong> \( n = 1 \). Premise 1 gives us that 1 grain is not a heap.</li>
-        <li><strong>Inductive step:</strong> Suppose \( n \) grains is not a heap. Then Premise 2 implies that \( n + 1 \) grains is also not a heap.</li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Other Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reflections.html" class="active">Reflections</a></li>
       </ul>
-      <p>By mathematical induction, all positive integers fail to form a heap — including 1 billion grains — contradicting Premise 3.</p>
+    </nav>
+  </header>
 
-      <p>If you’re unfamiliar with induction, here’s an intuition: imagine lining up an infinite number of dominos. The base case knocks over the first one. The inductive step ensures that if any domino falls, the next will too. Together, they prove every domino falls — just like we proved every number of grains isn’t a heap.</p>
+  <main id="main-content">
+    <section id="reflections">
+      <h1>Reflections</h1>
+      <p>
+        Informal thoughts and short essays on mathematical philosophy, abstraction, and related topics.
+      </p>
 
-      <p>So what went wrong? Our reasoning was valid. Our premises seemed reasonable. Yet we reached a contradiction — a paradox. My resolution: we should not expect vague, everyday language to behave well under formal logic. Logic requires precise objects and definitions, not fuzzy boundaries or subjective interpretation.</p>
+      <ul>
+        <li><a href="#precision">On the Importance of Precision of Language</a></li>
+        <li><a href="#abstraction">The Danger In Abstraction</a></li>
+      </ul>
 
-      <p>Suppose we tried to formalize “heap” with precision: how many grains, how closely packed, their dimensions, their shape, etc. The resulting definition would be long and hard to apply in real-time conversation. But that vagueness is what makes the word "heap" so usable in daily life. It’s fast, flexible, and generally good enough. For casual use, imprecision is an asset.</p>
+      <hr>
 
-      <p>But in disciplines where precision, truth, and consistency matter — like science or mathematics — vagueness is fatal. There, the tradeoff of accessibility for exactness is well worth it.</p>
+      <details id="precision">
+        <summary>On the Importance of Precision of Language</summary>
+        <div>
+          <p><em>In this essay, I respond to a question posed by a philosophy classmate at Madison: "If mathematics is so remarkably successful at describing the universe, does that not support the existence of a creator of the universe?"</em></p>
 
-      <p>Try this: define “heap” with a list of precise conditions. Then examine each condition — is it itself vague? If so, define that term too. Eventually you’ll reach a stopping point: a primitive concept that can’t be defined further without circularity. In mathematics, that’s exactly how it works.</p>
+          <p>Imagine I am holding a single grain of sand in my palm. I ask you, "Is this a heap of sand?"</p>
+          <p>You, being the reasonable human you are, look at me quizzically and ask why I'd even pose such a trivial question. I reply, "Never mind that — just humor me and help me out with this experiment."</p>
+          <p>After adding another grain, I ask again, "Now do I have a heap?"</p>
+          <p>"No, of course not."</p>
+          <p>Eventually, after painstakingly adding tens, maybe hundreds, or even thousands of individual grains, you reach a point where you’re no longer sure how to respond. On one hand, I’m now holding something that definitely resembles a heap. On the other, you think: <em>But I just said it wasn’t a heap last time, and all he did was add one more grain. How could a single grain of sand turn a non-heap into a heap?</em></p>
+          <p>Then you wonder: <em>So where should I have said yes? The last time? Ten times before? A hundred?</em></p>
+          <p>You're not at fault for this uncertainty — anyone as logical as you would face the same dilemma. The issue lies in the vagueness of the word "heap." It lacks precise criteria, so logical reasoning struggles to apply. Let's formalize this by pairing your reasoning with a few plausible premises:</p>
 
-      <p>Mathematics builds everything — numbers, functions, spaces — from primitive objects like sets. A set is inherently precise. It has no gray area. So mathematics succeeds not because it is magically aligned with the universe, but because it is the only system we’ve created that is <em>precise enough</em> for logic to fully apply. Every concept has a fixed definition; every step of reasoning is constrained by rules.</p>
+          <ol>
+            <li>1 grain of sand is not a heap.</li>
+            <li>For any positive integer \( n \), if \( n \) grains of sand is not a heap, then \( n + 1 \) grains of sand is not a heap.</li>
+            <li>1 billion grains of sand is a heap.</li>
+          </ol>
 
-      <p>So in response to the question: no, I don’t think mathematics needs a divine explanation. I believe its success is due to its unparalleled clarity — a clarity that comes from working only with well-defined, precisely constructed objects. If any other field could match that, perhaps it too would enjoy the same predictive power and elegance.</p>
+          <p>You might object: "If those billion grains were spread across the Earth, it wouldn't be a heap!" Fair. So let’s assume they are placed in a reasonable pile — no tricks or loopholes. We now show that these three premises are inconsistent using a standard mathematical proof technique: induction.</p>
 
-      <p><strong>Mathematics works not because the universe was written in its language, but because mathematics is the only language we’ve refined enough to speak clearly.</strong></p>
-    </div>
-  </details>
-  
-   <details id="abstraction">
-    <summary>The Danger in Abstraction and Modeling Reality Axiomatically </summary>
-    <div>
-      <p><em>Mathematics is undoubtedly one of the most sucessful tools known to mankind; however, are there any drawbacks to the pure deductive reasoning found exclusively in mathematics?</em></p>
+          <p>We claim that if Premises 1 and 2 are true, then for any positive integer \( n \), \( n \) grains of sand is not a heap.</p>
+          <ul>
+            <li><strong>Base case:</strong> \( n = 1 \). Premise 1 gives us that 1 grain is not a heap.</li>
+            <li><strong>Inductive step:</strong> Suppose \( n \) grains is not a heap. Then Premise 2 implies that \( n + 1 \) grains is also not a heap.</li>
+          </ul>
+          <p>By mathematical induction, all positive integers fail to form a heap — including 1 billion grains — contradicting Premise 3.</p>
 
-     <p>The distinctive feature of mathematics, compared to the other sciences, is that it does not begin from observation. Remarkably, mathematics is not grounded in reality in the experimental sense, despite its wide application to our understanding of the world through other disciplines. In physics one might observe an object falling and try to understand this phenomenon; in chemistry, one observes heat released when two solutions are mixed and asks why some processes “create” heat while others don’t; in biology, one asks how cells know which proteins to create, and when. To answer such questions, one creates theories and tests them with experiments, ensuring the theories cannot deviate too far from reality.</p>
+          <p>If you’re unfamiliar with induction, here’s an intuition: imagine lining up an infinite number of dominos. The base case knocks over the first one. The inductive step ensures that if any domino falls, the next will too. Together, they prove every domino falls — just like we proved every number of grains isn’t a heap.</p>
 
-<p>But mathematics is different—mathematical objects are defined by the rules they should satisfy: the axiomatic method. This approach has great advantages. Because mathematical objects are specified independently of physical measurement, progress is never reliant on advanced technologies. As a contrasting example from physics, string theory aims to unify otherwise incompatible theories by hypothesising tiny vibrating strings; as beautiful as it is, many of its claims don’t seem experimentally accessible yet, which some physicists criticise. In mathematics, technology can certainly speed up discovery by supplying evidence, but it doesn’t bottleneck progress. Another feature of the axiomatic method is the unusual precision of language—essentially unique to mathematics and logic--which is, I think, a major reason for mathematics’ success.</p>
+          <p>So what went wrong? Our reasoning was valid. Our premises seemed reasonable. Yet we reached a contradiction — a paradox. My resolution: we should not expect vague, everyday language to behave well under formal logic. Logic requires precise objects and definitions, not fuzzy boundaries or subjective interpretation.</p>
 
-<p>Given these advantages, it’s natural to ask about the drawbacks. One stands out to me and partly explains why other sciences are experimental rather than axiomatic (aside from the difficulty of agreeing on axioms powerful enough to describe reality without being too presumptuous about it): if the objects one studies are purely abstract, how does one know when they tell us something about the physical world? For example, without worrying about terminology, if you consider the Galois group of an algebraic number field, it is not obvious that this object has any direct manifestation in reality. In experimental sciences, empirical checks ultimately arbitrate relevance; in mathematics, the connection is often indirect.</p>
+          <p>Suppose we tried to formalize “heap” with precision: how many grains, how closely packed, their dimensions, their shape, etc. The resulting definition would be long and hard to apply in real-time conversation. But that vagueness is what makes the word "heap" so usable in daily life. It’s fast, flexible, and generally good enough. For casual use, imprecision is an asset.</p>
 
-<p>Still, we study mathematics—like any science—because it illuminates reality. History shows that ideas that seem <em>a priori</em> purely abstract often turn out to be <em>a posteriori</em> essential. For instance, \(\sqrt{-1}\) was long thought to lack any physical meaning, yet complex numbers became essential to quantum theory. Likewise, non-Euclidean geometries, first studied when mathematicians realized that Euclid's fifth postulate was independent of the others, underlie general relativity. For this reason, I’m only persuaded to care about a mathematical object when there’s at a plausible path to understanding some aspect of the world.</p>
+          <p>But in disciplines where precision, truth, and consistency matter — like science or mathematics — vagueness is fatal. There, the tradeoff of accessibility for exactness is well worth it.</p>
 
-<p>Lastly, why this view steers me toward number theory. It seems almost impossible to deny that the natural numbers \(0,1,2,\dots\) capture an aspect of reality. By studying them, I feel confident I’m learning something about how the world works. Of course, one cannot just look at the natural numbers in isolation; one moves among more abstract settings--the integers, rationals, reals, complex numbers, \(p\)-adic numbers, algebraic number fields, and so on. But the natural numbers are one of the few mathematical structures I'm entirely convinced directly describe something in the physical world. For example, I’m not fully convinced that space is correctly modelled by the real numbers. It is intuitive that space is infinitely divisible and that every Cauchy sequence of locations converges to a location, but these are not obviously true of reality. General relativity models spacetime as a smooth manifold, while some approaches to quantum gravity suggest discreteness. Since even our most modern theories of space cannot agree on its most basic properties, it’s unclear whether space behaves (locally) like the real numbers or something else.</p>
+          <p>Try this: define “heap” with a list of precise conditions. Then examine each condition — is it itself vague? If so, define that term too. Eventually you’ll reach a stopping point: a primitive concept that can’t be defined further without circularity. In mathematics, that’s exactly how it works.</p>
 
-<p>As a result, I am hesitant to spend my life studying objects whose primary interest comes from modelling aspects of reality I'm not confident we understand—for instance, manifolds. To be clear, this is not to call such studies meaningless: there are good reasons to think these structures capture aspects of reality, and they often shed light on other mathematical questions. I simply tend to treat the reals, the \(p\)-adics, and related frameworks as tools to understand the arithmetic of the natural numbers. That inclination naturally leads to number theory—and largely explains why I now study it.</p>
+          <p>Mathematics builds everything — numbers, functions, spaces — from primitive objects like sets. A set is inherently precise. It has no gray area. So mathematics succeeds not because it is magically aligned with the universe, but because it is the only system we’ve created that is <em>precise enough</em> for logic to fully apply. Every concept has a fixed definition; every step of reasoning is constrained by rules.</p>
 
+          <p>So in response to the question: no, I don’t think mathematics needs a divine explanation. I believe its success is due to its unparalleled clarity — a clarity that comes from working only with well-defined, precisely constructed objects. If any other field could match that, perhaps it too would enjoy the same predictive power and elegance.</p>
 
-        
-    </div>
-  </details>
+          <p><strong>Mathematics works not because the universe was written in its language, but because mathematics is the only language we’ve refined enough to speak clearly.</strong></p>
+        </div>
+      </details>
 
-  <footer>Back to <a href="index.html">Home</a></footer>
-</body>
-</html>
+      <details id="abstraction">
+        <summary>The Danger in Abstraction and Modeling Reality Axiomatically </summary>
+        <div>
+          <p><em>Mathematics is undoubtedly one of the most sucessful tools known to mankind; however, are there any drawbacks to the pure deductive reasoning found exclusively in mathematics?</em></p>
+
+          <p>The distinctive feature of mathematics, compared to the other sciences, is that it does not begin from observation. Remarkably, mathematics is not grounded in reality in the experimental sense, despite its wide application to our understanding of the world through other disciplines. In physics one might observe an object falling and try to understand this phenomenon; in chemistry, one observes heat released when two solutions are mixed and asks why some processes “create” heat while others don’t; in biology, one asks how cells know which proteins to create, and when. To answer such questions, one creates theories and tests them with experiments, ensuring the theories cannot deviate too far from reality.</p>
+
+          <p>But mathematics is different—mathematical objects are defined by the rules they should satisfy: the axiomatic method. This approach has great advantages. Because mathematical objects are specified independently of physical measurement, progress is never reliant on advanced technologies. As a contrasting example from physics, string theory aims to unify otherwise incompatible theories by hypothesising tiny vibrating strings; as beautiful as it is, many of its claims don’t seem experimentally accessible yet, which some physicists criticise. In mathematics, technology can certainly speed up discovery by supplying evidence, but it doesn’t bottleneck progress. Another feature of the axiomatic method is the unusual precision of language—essentially unique to mathematics and logic--which is, I think, a major reason for mathematics’ success.</p>
+
+          <p>Given these advantages, it’s natural to ask about the drawbacks. One stands out to me and partly explains why other sciences are experimental rather than axiomatic (aside from the difficulty of
