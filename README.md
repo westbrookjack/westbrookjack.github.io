@@ -4,11 +4,12 @@ This repository contains the source code for [Jack Westbrook’s academic websit
 
 ## 🔍 About
 
-I am an incoming MSc student in Pure Mathematics at Imperial College London, with research interests in:
+I am a current MSc student in Pure Mathematics at Imperial College London, with research interests in:
 
 - Arithmetic Geometry
 - p-adic Hodge theory  
 - Modularity
+- Formalization
 
 The site highlights selected research projects, solution compilations (e.g. Vakil’s *The Rising Sea*), and relevant academic software/code.
 
