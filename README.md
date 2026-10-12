@@ -4,7 +4,7 @@ This repository contains the source code for [Jack Westbrook’s academic websit
 
 ## 🔍 About
 
-I am a current MSc student in Pure Mathematics at Imperial College London, with research interests in:
+I completed the academic work for the MSc in Pure Mathematics at Imperial College London in 2026 (final results pending November 2026), with research interests in:
 
 - Arithmetic Geometry
 - p-adic Hodge theory  
