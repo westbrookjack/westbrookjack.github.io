@@ -1,10 +1,14 @@
-# Jack Westbrook – Academic Website
+# Jack Westbrook – Academic & Professional Website
 
 This repository contains the source code for [Jack Westbrook’s academic website](https://westbrookjack.github.io), a professional portfolio designed to showcase research, publications, and academic interests in mathematics.
 
 ## 🔍 About
 
-I am a current MSc student in Pure Mathematics at Imperial College London, with research interests in:
+I have completed an MSc in Pure Mathematics at Imperial College London, with a thesis on ℓ-adic Galois representations and Serre’s Open Image Theorem, and hold a BA in Mathematics from UW–Madison.
+
+I am pursuing quantitative research, quantitative trading, and mathematically oriented software engineering roles, preferably in the United States. My projects include C++, Rust, Python, Lean, and Macaulay2.
+
+My research interests include:
 
 - Arithmetic Geometry
 - p-adic Hodge theory  
@@ -20,7 +24,11 @@ Visit the site here: [https://westbrookjack.github.io](https://westbrookjack.git
 ## 📁 Contents
 
 - `index.html` – Main HTML page for the personal website
-- `CV.pdf` – My most recent academic CV (linked from the homepage)
+- `research.html` – Thesis, research projects, and preprint links
+- `projects.html` – Programming projects, mathematical software, and expository writing
+- `contact.html` – Professional contact information
+- `reflections.html` – Personal writing
+- The homepage links to the November 2025 academic CV in the separate `CV` repository
 - `casual_headshot_passport_sized.png` – Profile image used on the site
 - `calculator_math_icon.png` – Custom site icon (optional)
 
