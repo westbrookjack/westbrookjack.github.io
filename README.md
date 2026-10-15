@@ -4,7 +4,7 @@ This repository contains the source code for [Jack Westbrook’s academic websit
 
 ## 🔍 About
 
-I have completed an MSc in Pure Mathematics at Imperial College London, with a thesis on ℓ-adic Galois representations and Serre’s Open Image Theorem, and hold a BA in Mathematics from UW–Madison.
+I have completed the MSc Pure Mathematics programme and dissertation at Imperial College London; final results and the award are pending. My dissertation is on ℓ-adic Galois representations and Serre’s Open Image Theorem. I hold a BA in Mathematics from UW–Madison.
 
 I am pursuing quantitative research, quantitative trading, and mathematically oriented software engineering roles, preferably in the United States. My projects include C++, Rust, Python, Lean, and Macaulay2.
 
@@ -28,7 +28,8 @@ Visit the site here: [https://westbrookjack.github.io](https://westbrookjack.git
 - `projects.html` – Programming projects, mathematical software, and expository writing
 - `contact.html` – Professional contact information
 - `reflections.html` – Personal writing
-- The homepage links to the November 2025 academic CV in the separate `CV` repository
+- `Jack_Westbrook_Quantitative_Resume_October_2026.pdf` – Public quantitative résumé (October 2026)
+- The homepage also links to the historical November 2025 academic CV in the separate `CV` repository
 - `casual_headshot_passport_sized.png` – Profile image used on the site
 - `calculator_math_icon.png` – Custom site icon (optional)
 
