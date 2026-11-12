@@ -28,7 +28,7 @@ Visit the site here: [https://westbrookjack.github.io](https://westbrookjack.git
 - `projects.html` – Programming projects, mathematical software, and expository writing
 - `contact.html` – Professional contact information
 - `reflections.html` – Personal writing
-- `Jack_Westbrook_Quantitative_Resume_October_2026.pdf` – Public quantitative résumé (October 2026)
+- `Jack_Westbrook_Quantitative_Resume_October_2026.pdf` – Public quantitative résumé (MSc award updated November 2026)
 - The homepage also links to the historical November 2025 academic CV in the separate `CV` repository
 - `casual_headshot_passport_sized.png` – Profile image used on the site
 - `calculator_math_icon.png` – Custom site icon (optional)
