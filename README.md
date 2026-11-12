@@ -4,7 +4,7 @@ This repository contains the source code for [Jack Westbrook’s academic websit
 
 ## 🔍 About
 
-I have completed the MSc Pure Mathematics programme and dissertation at Imperial College London; final results and the award are pending. My dissertation is on ℓ-adic Galois representations and Serre’s Open Image Theorem. I hold a BA in Mathematics from UW–Madison.
+I hold an MSc in Pure Mathematics with Distinction from Imperial College London, conferred on 1 November 2026. My dissertation is on ℓ-adic Galois representations and Serre’s Open Image Theorem. I hold a BA in Mathematics from UW–Madison.
 
 I am pursuing quantitative research, quantitative trading, and mathematically oriented software engineering roles, preferably in the United States. My projects include C++, Rust, Python, Lean, and Macaulay2.
 
